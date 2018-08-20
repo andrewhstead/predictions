@@ -3,8 +3,13 @@
 
 {% block content %}
 
-    {% for user in users %}
-        {{user.username}}
-    {% endfor %}
+	<h2>
+		Welcome, 
+		{% if user.is_authenticated %}
+    	    {{user.username}}
+    	{% else %}
+    		Guest
+    	{% endif %}
+    </h2>
 
 {% endblock %}

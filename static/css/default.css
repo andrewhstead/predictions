@@ -1,0 +1,25 @@
+/* General site layout styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Verdana", "sans serif";
+    background-color: #ffdd99;
+}
+
+header {
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-family: "Dot Matrix 1";
+	padding: 10px 0 5px 0;
+}
+
+h1 {
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+	font-size: 1em;
+	font-weight: normal;
+}

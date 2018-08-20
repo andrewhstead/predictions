@@ -8,6 +8,6 @@ from users.models import User
 # The default home page view.
 def home_page(request):
 
-    users = User.objects.all()
+    user = request.user
     
-    return render(request, "home.html", {"users": users})
+    return render(request, "home.html", {"user": user})
