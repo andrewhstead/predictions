@@ -1,7 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.db import models
-from teams.models import Team
 
 # Create your models here.
 # The country or continent in which a competition is based.
@@ -18,7 +17,6 @@ class Competition(models.Model):
 	area = models.ForeignKey(Area, related_name='competitions')
 	name = models.CharField(max_length=100)
 	abbreviation = models.CharField(max_length=3)
-	teams = models.ManyToManyField(Team, related_name='competition', blank=True)
     	
 	def __unicode__(self):
 		return self.name
