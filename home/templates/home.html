@@ -12,4 +12,8 @@
     	{% endif %}
     </h2>
 
+    {% for team in teams %}
+    	{{ team.full_name }}<br />
+    {% endfor %}
+
 {% endblock %}
