@@ -10,6 +10,6 @@ from games.models import Game
 def home_page(request):
 
     user = request.user
-    games = Game.objects.all()
+    fixtures = Game.objects.filter(game_status="Scheduled")
     
-    return render(request, "home.html", {"user": user, "games": games})
+    return render(request, "home.html", {"user": user, "fixtures": fixtures})

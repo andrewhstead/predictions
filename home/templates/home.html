@@ -14,10 +14,20 @@
 
 	<section class="scoreboard">
 
-		{% for game in games %}
-			<div class="game-score">
-				{{ game.home_team|upper }}<br />
-				{{ game.away_team|upper }}
+		{% for fixture in fixtures %}
+			<div class="game-details">
+				<div class="game-element">
+					{{ fixture.competition.area.abbreviation }} {{ fixture.competition.abbreviation }}
+				</div>
+				<div class="game-element">
+					{{ fixture.home_team.abbreviation }}
+				</div>
+				<div class="game-element">
+					{{ fixture.home_team_score }} - {{ fixture.away_team_score }}
+				</div>
+				<div class="game-element">
+					{{ fixture.away_team.abbreviation }}
+				</div>
 			</div>
 		{% endfor %}
 
