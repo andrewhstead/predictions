@@ -6,14 +6,21 @@
 	<h2>
 		Welcome, 
 		{% if user.is_authenticated %}
-    	    {{user.username}}
-    	{% else %}
-    		Guest
-    	{% endif %}
-    </h2>
+			{{user.username}}
+		{% else %}
+			Guest
+		{% endif %}
+	</h2>
 
-    {% for team in teams %}
-    	{{ team.full_name }}<br />
-    {% endfor %}
+	<section class="scoreboard">
+
+		{% for game in games %}
+			<div class="game-score">
+				{{ game.home_team|upper }}<br />
+				{{ game.away_team|upper }}
+			</div>
+		{% endfor %}
+
+	</section>
 
 {% endblock %}

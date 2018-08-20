@@ -23,3 +23,15 @@ h2 {
 	font-size: 1em;
 	font-weight: normal;
 }
+
+/* Classes for scoreboard views */
+.scoreboard {
+	background-color: black;
+	color: white;
+	font-family: "Dot Matrix 1";
+	font-size: 1em;
+	margin: 0 5%;
+}
+.game-score {
+	padding: 3px 0 0 3px;
+}
